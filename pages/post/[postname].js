@@ -3,6 +3,7 @@ import matter from "gray-matter";
 import ReactMarkdown from "react-markdown";
 
 import Layout from "../../components/Layout";
+import CodeBlock from "../../components/CodeBlock";
 
 export default function BlogPost({ siteTitle, frontmatter, markdownBody }) {
   if (!frontmatter) return <></>;
@@ -17,7 +18,10 @@ export default function BlogPost({ siteTitle, frontmatter, markdownBody }) {
         <h1>{frontmatter.title}</h1>
         <p>By {frontmatter.author}</p>
         <div>
-          <ReactMarkdown source={markdownBody} />
+          <ReactMarkdown
+            source={markdownBody}
+            renderers={{ code: CodeBlock }}
+          />
         </div>
       </article>
     </Layout>
