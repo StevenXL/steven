@@ -8,6 +8,11 @@ export default function Header() {
           <Link href="/">
             <a>My Blog</a>
           </Link>
+
+          <Link href="/tags">
+            <a>All Topics</a>
+          </Link>
+
           <Link href="/about">
             <a>About</a>
           </Link>
