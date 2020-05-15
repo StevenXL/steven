@@ -23,8 +23,8 @@ export default function Layout({ children, pageTitle, ...props }) {
         <Header />
 
         <div className="content">{children}</div>
+        <footer>Built by me!</footer>
       </section>
-      <footer>Built by me!</footer>
 
       <script src="/static/js/jquery/jquery-3.5.1.slim.min.js"></script>
       <script src="/static/js/popper-1.16.0/popper.min.js"></script>
