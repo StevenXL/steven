@@ -1,6 +1,6 @@
-import { getAllMetadata as getAllPostsMetadata } from "../lib/posts";
 import Layout from "../components/Layout";
 import PostList from "../components/PostList";
+import { getAllMetadata as getAllPostsMetadata } from "../lib/posts";
 
 const Index = ({ title, description, posts, ...props }) => {
   return (
