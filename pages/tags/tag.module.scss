@@ -1,0 +1,11 @@
+.tagList {
+  padding-inline-start: 0;
+}
+
+.tag {
+  &:not(:last-of-type) {
+    &::after {
+      content: ",";
+    }
+  }
+}
