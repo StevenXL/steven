@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Header from "./Header";
+import Header from "../Header";
 
 export default function Layout({ children, pageTitle, ...props }) {
   return (
@@ -19,7 +19,7 @@ export default function Layout({ children, pageTitle, ...props }) {
         <title>{pageTitle}</title>
       </Head>
 
-      <section className="layout">
+      <section className="py-5 px-4">
         <Header />
 
         <div className="content">{children}</div>
