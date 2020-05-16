@@ -1,6 +1,10 @@
 import Link from "next/link";
+import className from "classnames";
+import { useRouter } from "next/router";
 
 export default function Header() {
+  const { pathname } = useRouter();
+
   return (
     <div className="container">
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -22,19 +26,29 @@ export default function Header() {
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto">
-            <li className="nav-item active">
+            <li className={className("nav-item", { active: pathname === "/" })}>
               <Link href="/">
-                <a className="nav-link">Home</a>
+                <a className={`nav-link ${pathname === "/" ? "active" : null}`}>
+                  Home
+                </a>
               </Link>
             </li>
 
-            <li className="nav-item">
+            <li
+              className={className("nav-item", {
+                active: pathname === "/about",
+              })}
+            >
               <Link href="/about">
                 <a className="nav-link">About</a>
               </Link>
             </li>
 
-            <li className="nav-item">
+            <li
+              className={className("nav-item", {
+                active: pathname === "/tags",
+              })}
+            >
               <Link href="/tags">
                 <a className="nav-link">All Topics</a>
               </Link>
