@@ -2,7 +2,7 @@
 author: Steven Leiva
 createdAt: 1589691735
 tags: [Initial Commit]
-teaser: Creating my website
+teaser: In this post, I lay out my rationale for shipping this website as is, warts and all!
 title: Initial Commit
 updatedAt: 1589691735
 ---

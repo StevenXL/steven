@@ -1,8 +1,6 @@
-.tagList {
-  padding-inline-start: 0;
-}
-
 .tag {
+  background: #f5f5f5;
+
   &:not(:last-of-type) {
     &::after {
       content: ",";
