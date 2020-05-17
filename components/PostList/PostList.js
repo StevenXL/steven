@@ -1,23 +1,16 @@
 import Link from "next/link";
+import { isEmpty, isNil } from "ramda";
+
+import PostPreview from "../../components/PostPreview";
 
 export default function PostList({ posts }) {
-  if (posts === "undefined") return null;
+  const noPosts = isEmpty(posts) || isNil(posts);
 
-  return (
-    <div>
-      {!posts && <div>No posts!</div>}
-      <ul>
-        {posts &&
-          posts.map((post) => {
-            return (
-              <li key={post.slug}>
-                <Link href={{ pathname: `/posts/${post.slug}` }}>
-                  <a>{post.title}</a>
-                </Link>
-              </li>
-            );
-          })}
-      </ul>
-    </div>
-  );
+  if (noPosts) {
+    return <div>No posts!</div>;
+  } else {
+    return posts.map((post) => {
+      return <PostPreview key={post.slug} {...post} />;
+    });
+  }
 }

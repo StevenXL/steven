@@ -5,7 +5,7 @@ export default function Layout({ children, pageTitle, ...props }) {
   return (
     <>
       <Head>
-        <meta charset="utf-8" />
+        <meta charSet="utf-8" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
@@ -22,8 +22,7 @@ export default function Layout({ children, pageTitle, ...props }) {
       <section className="py-5 px-4">
         <Header />
 
-        <div className="content">{children}</div>
-        <footer>Built by me!</footer>
+        {children}
       </section>
 
       <script src="/static/js/jquery/jquery-3.5.1.slim.min.js"></script>

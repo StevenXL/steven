@@ -7,7 +7,7 @@ export default function Header() {
 
   return (
     <div className="container">
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav className="p-0 navbar navbar-expand-lg navbar-light bg-white">
         <Link href="/">
           <a className="navbar-brand">Steven</a>
         </Link>

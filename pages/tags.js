@@ -3,10 +3,10 @@ import { uniqueTags as uniqueTagsFromPosts } from "../lib/posts";
 import Layout from "../components/Layout";
 import TagList from "../components/TagList";
 
-const Tags = ({ title, description, tags, ...props }) => {
+const Tags = ({ tags, ...props }) => {
   return (
     <>
-      <Layout pageTitle={`${title} | About`} description={description}>
+      <Layout pageTitle="Steven Leiva | All Topics">
         <TagList tags={tags} />
       </Layout>
     </>
@@ -14,15 +14,11 @@ const Tags = ({ title, description, tags, ...props }) => {
 };
 
 export async function getStaticProps() {
-  const { description, title } = await import(`../siteconfig.json`);
-
   const tags = uniqueTagsFromPosts();
 
   return {
     props: {
-      description,
       tags,
-      title,
     },
   };
 }
