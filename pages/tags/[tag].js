@@ -44,7 +44,7 @@ export async function getStaticProps(context) {
 
   const fn = (tagDisplay) => equals(slugify(tagDisplay), tagSlug);
 
-  const tagDisplay = find(fn, posts[0].tags);
+  const tagDisplay = find(fn, posts[0].data.tags);
 
   return {
     props: {

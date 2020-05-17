@@ -5,7 +5,9 @@ import { slugify } from "voca";
 
 import styles from "./styles.module.scss";
 
-function PostPreview({ teaser, title, createdAt, tags }) {
+function PostPreview(props) {
+  const { teaser, title, createdAt, tags } = props.data;
+
   const sortedTags = sortBy(identity, tags);
 
   return (
@@ -34,6 +36,9 @@ function PostPreview({ teaser, title, createdAt, tags }) {
           </ul>
         </div>
       </div>
+      <Link href={`/posts/${props.slug}`}>
+        <a>Read More...</a>
+      </Link>
     </>
   );
 }
