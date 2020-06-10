@@ -9,7 +9,7 @@ export default function BlogPost({ frontmatter, markdownBody }) {
 
   return (
     <Layout pageTitle={frontmatter.title}>
-      <article class="container">
+      <article className="container">
         <h1>{frontmatter.title}</h1>
         <p>By {frontmatter.author}</p>
         <div>

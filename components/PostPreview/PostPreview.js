@@ -9,7 +9,7 @@ function PostPreview(props) {
   const sortedTags = sortBy(identity, tags);
 
   return (
-    <div className="p-2 border rounded">
+    <div className="p-2 border rounded my-1">
       <p className="lead">{title}</p>
       <p>{teaser}</p>
 
