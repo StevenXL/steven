@@ -1,8 +1,17 @@
 import matter from "gray-matter";
 import ReactMarkdown from "react-markdown";
+import footnotes from "remark-footnotes";
 
 import Layout from "../../components/Layout";
 import CodeBlock from "../../components/CodeBlock";
+import FootnoteReference from "../../components/FootnoteReference";
+import FootnoteDefinition from "../../components/FootnoteDefinition";
+
+const renderers = {
+  code: CodeBlock,
+  footnoteReference: FootnoteReference,
+  footnoteDefinition: FootnoteDefinition,
+};
 
 export default function BlogPost({ frontmatter, markdownBody }) {
   if (!frontmatter) return <></>;
@@ -15,7 +24,8 @@ export default function BlogPost({ frontmatter, markdownBody }) {
         <div>
           <ReactMarkdown
             source={markdownBody}
-            renderers={{ code: CodeBlock }}
+            renderers={renderers}
+            plugins={[[footnotes, { inlineNotes: true }]]}
           />
         </div>
       </article>
