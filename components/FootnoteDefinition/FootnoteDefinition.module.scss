@@ -1,0 +1,19 @@
+.fnDefinition {
+  display: block;
+
+  p {
+    display: inline;
+  }
+
+  p:first-of-type {
+    margin-right: 0.25rem;
+  }
+
+  a {
+    margin-left: 0.25rem;
+  }
+
+  svg {
+    width: 0.75rem;
+  }
+}

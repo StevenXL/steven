@@ -1,6 +1,8 @@
 import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
 
+import styles from "./FootnoteDefinition.module.scss";
+
 class FootnoteDefinition extends PureComponent {
   static propTypes = {
     children: PropTypes.node,
@@ -14,12 +16,10 @@ class FootnoteDefinition extends PureComponent {
     console.log(this.props);
 
     return (
-      <span id={`fn-${identifier}`} className="footnote-definition">
+      <span id={`fn-${identifier}`} className={styles.fnDefinition}>
         <p>{label}:</p>
         {children}
-        <a href={`#fnref-${identifier}`} className="footnote-backref">
-          ↩
-        </a>
+        <a href={`#fnref-${identifier}`}>↩</a>
       </span>
     );
   }
