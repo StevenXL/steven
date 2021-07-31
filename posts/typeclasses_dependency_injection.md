@@ -2,9 +2,9 @@
 author: Steven Leiva
 createdAt: 1595427079
 tags: [Haskell, Typeclasses, Dependency Injection]
-teaser: Conceptualizing Haskell Typeclasses as Dependency Injection (on steroids)
+teaser: In this post, we take a look at Haskell Typeclasses as dependency injection on steroids.
 title: Haskell Typeclasses & Dependency Injection
-updatedAt: 1595427079
+updatedAt: 1627736497
 ---
 
 There are a multitude of "lenses" with which to view typeclasses in Haskell. We
