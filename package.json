@@ -6,7 +6,7 @@
     "@types/node": "^13.13.5",
     "@types/react-dom": "^16.9.7",
     "gray-matter": "^4.0.2",
-    "next": "9.3.6",
+    "next": "13.0.2",
     "ramda": "^0.27.0",
     "raw-loader": "^4.0.1",
     "react": "16.13.1",
